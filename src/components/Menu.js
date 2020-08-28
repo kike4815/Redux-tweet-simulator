@@ -2,8 +2,17 @@
 import React from 'react'
 import { Button, Container, Navbar } from 'react-bootstrap'
 import Logoredux from '../assets/img/redux.png'
+import {useDispatch} from 'react-redux'
+import {openCloseAddTweetModalAction} from '../actions/modalActions'
 
 export default function Menu () {
+    const dispatch = useDispatch();
+    const openCloseAddTweetModal = state => dispatch(openCloseAddTweetModalAction(state))
+
+    const openModal = () => {
+        openCloseAddTweetModal(true)
+    }
+
     return (
         <>
         <Navbar bg='dark' variant='dark'>
@@ -18,7 +27,7 @@ export default function Menu () {
                 />
                 Tweets Redux Simulator
             </Navbar.Brand>
-            <Button variant='outline-success'>Nuevo Tweet</Button>
+            <Button variant='outline-success' onClick={openModal}>Nuevo Tweet</Button>
             </Container>
         </Navbar>
         </>
