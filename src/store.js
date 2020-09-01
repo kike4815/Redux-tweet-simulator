@@ -3,7 +3,6 @@ import reducer from './reducers'
 import { getStateLocalStorage, setLocalStorage } from './utils/localStorage'
 
 const localStorage = getStateLocalStorage()
-
 const store = createStore(
     reducer,
     localStorage,

@@ -5,6 +5,6 @@ import tweetsReducer from './tweetsReducer'
 
 export default combineReducers({
     modals: modalReducer,
-    validationReducer,
-    tweetsReducer
+    validations: validationReducer,
+    tweets: tweetsReducer
 })

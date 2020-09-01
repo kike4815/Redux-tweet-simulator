@@ -15,7 +15,7 @@ export default function FormAddTweet () {
     //REDUX
     const dispatch = useDispatch()
     const errorForm = (state) => dispatch(validationFormAddTweet(state))
-    const errorFormValue = useSelector((state) => state.validationReducer.errorFormAddTweet)
+    const errorFormValue = useSelector((state) => state.validations.errorFormAddTweet)
     const addTweet = (state) => dispatch(addTweetActions(state))
     const closeModal = (state) => dispatch(openCloseAddTweetModalAction(state))
 
